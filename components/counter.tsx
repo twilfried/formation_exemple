@@ -17,7 +17,7 @@ export default function Counter() {
         className="ml-4 p-2 bg-gray-600 rounded-md"
         onClick={() => setState((state) => state + 1)}
       >
-        Next
+        Next Value
       </button>
     </form>
   );
