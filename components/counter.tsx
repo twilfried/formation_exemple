@@ -3,7 +3,7 @@
 import { useState } from "react";
 
 export default function Counter() {
-  const [state, setState] = useState(0);
+  const [state, setState] = useState(10);
 
   return (
     <form
@@ -17,7 +17,7 @@ export default function Counter() {
         className="ml-4 p-2 bg-gray-600 rounded-md"
         onClick={() => setState((state) => state + 1)}
       >
-        Next Value
+        Next
       </button>
     </form>
   );
