@@ -1,9 +1,15 @@
 "use client";
 
+import getRandomValue from "@/lib/get-random-value";
 import { useState } from "react";
 
 export default function Counter() {
   const [state, setState] = useState(10);
+
+  async function handleClick() {
+    const value = await getRandomValue();
+    setState(value);
+  }
 
   return (
     <form
@@ -13,11 +19,8 @@ export default function Counter() {
       }}
     >
       <label> Counter: {state} </label>
-      <button
-        className="ml-4 p-2 bg-gray-600 rounded-md"
-        onClick={() => setState((state) => state + 1)}
-      >
-        Next
+      <button className="ml-4 p-2 bg-gray-600 rounded-md" onClick={handleClick}>
+        Randomize
       </button>
     </form>
   );

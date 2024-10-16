@@ -33,6 +33,6 @@ jobs:
           username: ${{ secrets.SSH_USERNAME }}
           key: ${{ secrets.SSH_KEY }}
           port: ${{ secrets.PORT }}
-          source: "out/*"
+          source: "*,!node_modules,!.vscode"
           target: "/var/www/html"
           strip_components: 1
