@@ -34,5 +34,5 @@ jobs:
           key: ${{ secrets.SSH_KEY }}
           port: ${{ secrets.PORT }}
           source: "*,!node_modules,!.vscode"
-          target: "/var/www/html"
+          target: "/var/www/app"
           strip_components: 1
